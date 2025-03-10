@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Menu, X, Droplet } from "lucide-react";
+import { Phone, Menu, X, Droplet, Home, Wrench, Users, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -37,17 +37,21 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="nav-link font-medium">
-            Strona główna
+          <Link to="/" className="nav-link font-medium flex items-center gap-1">
+            <Home className="h-4 w-4" />
+            <span>Strona główna</span>
           </Link>
-          <Link to="/uslugi" className="nav-link font-medium">
-            Usługi
+          <Link to="/uslugi" className="nav-link font-medium flex items-center gap-1">
+            <Wrench className="h-4 w-4" />
+            <span>Usługi</span>
           </Link>
-          <Link to="/o-nas" className="nav-link font-medium">
-            O nas
+          <Link to="/o-nas" className="nav-link font-medium flex items-center gap-1">
+            <Users className="h-4 w-4" />
+            <span>O nas</span>
           </Link>
-          <Link to="/kontakt" className="nav-link font-medium">
-            Kontakt
+          <Link to="/kontakt" className="nav-link font-medium flex items-center gap-1">
+            <MessageCircle className="h-4 w-4" />
+            <span>Kontakt</span>
           </Link>
           <Button asChild className="bg-accent hover:bg-accent-dark text-white rounded-full flex items-center gap-2">
             <a href="tel:07960367566">
@@ -61,21 +65,25 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="fixed inset-0 bg-white z-40 pt-20 px-4 md:hidden">
             <nav className="flex flex-col items-center gap-8 text-lg">
-              <Link to="/" className="nav-link font-medium" onClick={toggleMenu}>
-                Strona główna
+              <Link to="/" className="nav-link font-medium flex items-center gap-2" onClick={toggleMenu}>
+                <Home className="h-5 w-5" />
+                <span>Strona główna</span>
               </Link>
-              <Link to="/uslugi" className="nav-link font-medium" onClick={toggleMenu}>
-                Usługi
+              <Link to="/uslugi" className="nav-link font-medium flex items-center gap-2" onClick={toggleMenu}>
+                <Wrench className="h-5 w-5" />
+                <span>Usługi</span>
               </Link>
-              <Link to="/o-nas" className="nav-link font-medium" onClick={toggleMenu}>
-                O nas
+              <Link to="/o-nas" className="nav-link font-medium flex items-center gap-2" onClick={toggleMenu}>
+                <Users className="h-5 w-5" />
+                <span>O nas</span>
               </Link>
-              <Link to="/kontakt" className="nav-link font-medium" onClick={toggleMenu}>
-                Kontakt
+              <Link to="/kontakt" className="nav-link font-medium flex items-center gap-2" onClick={toggleMenu}>
+                <MessageCircle className="h-5 w-5" />
+                <span>Kontakt</span>
               </Link>
               <Button asChild className="bg-accent hover:bg-accent-dark text-white rounded-full w-full flex items-center justify-center gap-2">
                 <a href="tel:07960367566">
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-5 w-5" />
                   <span>07960 367 566</span>
                 </a>
               </Button>
