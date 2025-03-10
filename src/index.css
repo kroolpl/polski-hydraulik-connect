@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -93,11 +92,20 @@
   }
 
   .service-card {
-    @apply bg-white rounded-xl p-6 shadow-md transition-all duration-300 border-l-4 border-plumber-600;
+    @apply bg-gradient-to-br from-white to-plumber-50 rounded-xl p-6 shadow-md transition-all duration-300 border-l-4 border-plumber-600 relative overflow-hidden;
   }
 
   .service-card:hover {
-    @apply shadow-xl -translate-y-1 border-accent;
+    @apply shadow-xl -translate-y-1 border-accent bg-gradient-to-br from-white to-plumber-100;
+  }
+
+  .service-card::after {
+    content: '';
+    @apply absolute bottom-0 right-0 w-16 h-16 bg-plumber-100 rounded-tl-3xl -z-10 transition-all duration-300 opacity-0;
+  }
+
+  .service-card:hover::after {
+    @apply opacity-100 bg-accent/10;
   }
 }
 

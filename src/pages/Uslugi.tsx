@@ -1,18 +1,26 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import { ShowerHead, Thermometer, Wrench, Droplet, Home, SunSnow, ArrowRight } from "lucide-react";
+import { ShowerHead, Thermometer, Wrench, Droplet, Home, SunSnow, ArrowRight, Bath, Toilet, Pipette, Waves } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const ServiceCard = ({ title, description, className = "" }) => {
+const ServiceCard = ({ title, description, className = "", icon = ArrowRight }) => {
+  const IconComponent = icon;
   return (
     <div className={`service-card group hover-lift ${className}`}>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="flex items-center gap-3 mb-4">
+        <div className="p-2.5 bg-plumber-100 rounded-lg text-plumber-600 group-hover:bg-plumber-600 group-hover:text-white transition-colors duration-300">
+          <IconComponent className="h-5 w-5" />
+        </div>
+        <h3 className="text-xl font-semibold text-plumber-800 group-hover:text-plumber-600 transition-colors duration-300">{title}</h3>
+      </div>
+      <p className="text-gray-600 mb-5">{description}</p>
       <div className="w-full flex justify-end">
-        <ArrowRight className="text-plumber-600 opacity-0 -translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+        <span className="text-sm font-medium text-plumber-600 flex items-center gap-1.5 opacity-0 -translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+          Dowiedz się więcej
+          <ArrowRight className="h-4 w-4" />
+        </span>
       </div>
     </div>
   );
@@ -38,7 +46,7 @@ const Uslugi = () => {
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-plumber-800 to-plumber-700 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxMTEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNi02aDZ2LTZoLTZ2NnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3TEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNi02aDZ2LTZoLTZ2NnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 fade-in-up">Nasze Usługi</h1>
             <p className="text-xl max-w-3xl mx-auto fade-in-up" style={{animationDelay: "0.2s"}}>
@@ -58,26 +66,32 @@ const Uslugi = () => {
                   <ServiceCard 
                     title="Montaż i naprawa kranów" 
                     description="Profesjonalny montaż i naprawa wszelkiego rodzaju kranów w łazience i kuchni."
+                    icon={Wrench}
                   />
                   <ServiceCard 
                     title="Montaż umywalek i zlewozmywaków" 
                     description="Montaż, wymiana i naprawa umywalek, zlewozmywaków i szafek łazienkowych."
+                    icon={Droplet}
                   />
                   <ServiceCard 
                     title="Instalacja wanien i pryszniców" 
                     description="Profesjonalny montaż wanien, kabin prysznicowych i systemów prysznicowych."
+                    icon={Bath}
                   />
                   <ServiceCard 
                     title="Montaż toalet i bidetów" 
                     description="Instalacja, wymiana i naprawa toalet, spłuczek i bidetów."
+                    icon={Toilet}
                   />
                   <ServiceCard 
                     title="Naprawa wycieków" 
                     description="Szybka i skuteczna naprawa wycieków wody i uszkodzonych rur."
+                    icon={Pipette}
                   />
                   <ServiceCard 
                     title="Udrażnianie odpływów" 
                     description="Profesjonalne udrażnianie zapchanych odpływów i rur kanalizacyjnych."
+                    icon={Waves}
                   />
                 </div>
               </div>
@@ -89,14 +103,17 @@ const Uslugi = () => {
                   <ServiceCard 
                     title="Montaż grzejników" 
                     description="Instalacja nowych grzejników oraz wymiana starych na bardziej efektywne."
+                    icon={Thermometer}
                   />
                   <ServiceCard 
                     title="Naprawa systemów ogrzewania" 
                     description="Diagnostyka i naprawa usterek w systemach centralnego ogrzewania."
+                    icon={Wrench}
                   />
                   <ServiceCard 
                     title="Serwisowanie instalacji" 
                     description="Regularne serwisowanie i konserwacja systemów centralnego ogrzewania."
+                    icon={SunSnow}
                   />
                 </div>
               </div>
@@ -108,14 +125,17 @@ const Uslugi = () => {
                   <ServiceCard 
                     title="Montaż rynien" 
                     description="Profesjonalny montaż nowych systemów rynnowych zgodnie z British Standard."
+                    icon={Home}
                   />
                   <ServiceCard 
                     title="Naprawa rynien" 
                     description="Naprawa uszkodzonych lub cieknących rynien i systemów odprowadzania wody."
+                    icon={Droplet}
                   />
                   <ServiceCard 
                     title="Montaż i naprawa opierzenia" 
                     description="Profesjonalny montaż i naprawa opierzenia dachowego."
+                    icon={Wrench}
                   />
                 </div>
               </div>
