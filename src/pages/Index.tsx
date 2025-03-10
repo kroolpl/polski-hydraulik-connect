@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Wrench, Droplet, ShowerHead, Thermometer, PiggyBank, Award, Clock, Check, Phone } from "lucide-react";
@@ -16,7 +15,7 @@ const Index = () => {
         <section className="bg-gradient-to-r from-plumber-800 to-plumber-700 text-white py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="max-w-2xl">
+              <div className="max-w-2xl fade-in-up">
                 <h1 className="text-3xl md:text-5xl font-bold mb-4">
                   Polski Hydraulik - Profesjonalne Usługi Hydrauliczne
                 </h1>
@@ -25,30 +24,30 @@ const Index = () => {
                   Wysokiej jakości usługi w przystępnych cenach.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-accent hover:bg-accent-dark text-white">
+                  <Button asChild size="lg" className="bg-accent hover:bg-accent-dark text-white hover-lift">
                     <Link to="/kontakt">Skontaktuj się</Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">
+                  <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10 hover-lift">
                     <Link to="/uslugi">Poznaj nasze usługi</Link>
                   </Button>
                 </div>
               </div>
-              <div className="hidden lg:flex justify-center">
+              <div className="hidden lg:flex justify-center fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <div className="relative bg-white/10 rounded-lg p-6 backdrop-blur">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="flex items-center gap-3 bg-white/10 rounded p-3">
+                  <div className="grid grid-cols-2 gap-4 stagger-fade-in">
+                    <div className="flex items-center gap-3 bg-white/10 rounded p-3 hover-lift">
                       <Wrench className="h-8 w-8 text-accent" />
                       <span>Montaż i naprawa</span>
                     </div>
-                    <div className="flex items-center gap-3 bg-white/10 rounded p-3">
+                    <div className="flex items-center gap-3 bg-white/10 rounded p-3 hover-lift">
                       <ShowerHead className="h-8 w-8 text-accent" />
                       <span>Łazienki i kuchnie</span>
                     </div>
-                    <div className="flex items-center gap-3 bg-white/10 rounded p-3">
+                    <div className="flex items-center gap-3 bg-white/10 rounded p-3 hover-lift">
                       <Thermometer className="h-8 w-8 text-accent" />
                       <span>Centralne ogrzewanie</span>
                     </div>
-                    <div className="flex items-center gap-3 bg-white/10 rounded p-3">
+                    <div className="flex items-center gap-3 bg-white/10 rounded p-3 hover-lift">
                       <Droplet className="h-8 w-8 text-accent" />
                       <span>Usuwanie wycieków</span>
                     </div>
@@ -62,8 +61,8 @@ const Index = () => {
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-plumber-800">Dlaczego warto nas wybrać?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h2 className="text-3xl font-bold text-center mb-12 text-plumber-800 fade-in-up">Dlaczego warto nas wybrać?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-fade-in">
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-plumber-100 text-plumber-600 mb-4">
                   <Award className="h-8 w-8" />
@@ -102,12 +101,12 @@ const Index = () => {
         {/* Services Overview */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-4 text-plumber-800">Nasze Usługi</h2>
-            <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-4 text-plumber-800 fade-in-up">Nasze Usługi</h2>
+            <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto fade-in-up" style={{ animationDelay: '0.1s' }}>
               Oferujemy kompleksowe usługi hydrauliczne dostosowane do Twoich potrzeb.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-fade-in">
               <div className="service-card">
                 <ShowerHead className="h-10 w-10 text-plumber-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Montaż i naprawa</h3>
@@ -151,8 +150,8 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="text-center mt-12">
-              <Button asChild size="lg" className="bg-plumber-700 hover:bg-plumber-800">
+            <div className="text-center mt-12 fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <Button asChild size="lg" className="bg-plumber-700 hover:bg-plumber-800 hover-lift">
                 <Link to="/uslugi">Zobacz wszystkie usługi</Link>
               </Button>
             </div>
@@ -161,12 +160,12 @@ const Index = () => {
 
         {/* Call to Action */}
         <section className="py-16 bg-plumber-700 text-white">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-4 text-center fade-in-up">
             <h2 className="text-3xl font-bold mb-6">Potrzebujesz hydraulika?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Skontaktuj się z nami już dziś! Oferujemy darmową wycenę i szybką realizację zleceń.
             </p>
-            <Button asChild size="lg" className="bg-accent hover:bg-accent-dark text-white">
+            <Button asChild size="lg" className="bg-accent hover:bg-accent-dark text-white hover-lift">
               <a href="tel:07960367566" className="inline-flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 <span>Zadzwoń teraz: 07960 367 566</span>
