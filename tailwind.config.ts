@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				plumber: {
+					50: '#f0f9ff',
+					100: '#e0f2fe',
+					200: '#bae6fd',
+					300: '#7dd3fc',
+					400: '#38bdf8',
+					500: '#0ea5e9',
+					600: '#0284c7',
+					700: '#0369a1',
+					800: '#1E3A8A',
+					900: '#0c4a6e',
+				},
+				accent: {
+					DEFAULT: '#F59E0B',
+					dark: '#D97706',
 				}
 			},
 			borderRadius: {
@@ -84,11 +101,17 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'water-drop': {
+					'0%': { transform: 'translateY(0) scale(1)', opacity: '0' },
+					'50%': { opacity: '1' },
+					'100%': { transform: 'translateY(20px) scale(0)', opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'water-drop': 'water-drop 2s ease-in-out infinite'
 			}
 		}
 	},
