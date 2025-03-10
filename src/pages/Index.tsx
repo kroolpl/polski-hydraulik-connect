@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { Wrench, Droplet, ShowerHead, Thermometer, PiggyBank, Award, Clock, Check } from "lucide-react";
+import { Wrench, Droplet, ShowerHead, Thermometer, PiggyBank, Award, Clock, Check, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
