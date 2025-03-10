@@ -13,16 +13,22 @@ const Navbar = () => {
   return (
     <header className="w-full py-4 bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2 group">
           <div className="relative">
-            <Droplet className="h-8 w-8 text-plumber-600" />
-            <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2">
+            <Droplet className="h-8 w-8 text-plumber-600 transition-colors duration-300 group-hover:text-plumber-500" />
+            <div className="water-drop-container">
+              {/* Water drops */}
               <div className="water-drop"></div>
               <div className="water-drop"></div>
               <div className="water-drop"></div>
+              
+              {/* Water splashes */}
+              <div className="water-splash"></div>
+              <div className="water-splash"></div>
+              <div className="water-splash"></div>
             </div>
           </div>
-          <span className="text-xl font-bold text-plumber-800">Polski Hydraulik</span>
+          <span className="text-xl font-bold text-plumber-800 transition-colors duration-300 group-hover:text-plumber-700">Polski Hydraulik</span>
         </Link>
 
         {/* Mobile Menu Button */}
