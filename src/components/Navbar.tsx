@@ -1,7 +1,6 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Menu, X, Droplet, Home, Wrench, Users, MessageCircle } from "lucide-react";
+import { Phone, Menu, X, Droplet, Home, Wrench, User, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -45,9 +44,9 @@ const Navbar = () => {
             <Wrench className="h-4 w-4" />
             <span>Usługi</span>
           </Link>
-          <Link to="/o-nas" className="nav-link font-medium flex items-center gap-1">
-            <Users className="h-4 w-4" />
-            <span>O nas</span>
+          <Link to="/o-mnie" className="nav-link font-medium flex items-center gap-1">
+            <User className="h-4 w-4" />
+            <span>O mnie</span>
           </Link>
           <Link to="/kontakt" className="nav-link font-medium flex items-center gap-1">
             <MessageCircle className="h-4 w-4" />
@@ -73,9 +72,9 @@ const Navbar = () => {
                 <Wrench className="h-5 w-5" />
                 <span>Usługi</span>
               </Link>
-              <Link to="/o-nas" className="nav-link font-medium flex items-center gap-2" onClick={toggleMenu}>
-                <Users className="h-5 w-5" />
-                <span>O nas</span>
+              <Link to="/o-mnie" className="nav-link font-medium flex items-center gap-2" onClick={toggleMenu}>
+                <User className="h-5 w-5" />
+                <span>O mnie</span>
               </Link>
               <Link to="/kontakt" className="nav-link font-medium flex items-center gap-2" onClick={toggleMenu}>
                 <MessageCircle className="h-5 w-5" />
